@@ -1,0 +1,37 @@
+*+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ctrl+Play</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+    <h2>Lista de Presenca</h2>
+    <ul id="lista">
+    </ul>
+    <input type="text" id="inse" placeholder="Digite o nome">
+    <button id="botao">adcionar</button>
+
+    <script>
+
+        $('ul').css('cursor', 'pointer');
+
+        $(document).on('click', 'li', function () {
+            $(this).hide();
+        });
+
+        $("#botao").click(function () {
+            var valorDoInput = $("#inse").val();
+            $('#lista').append('<li>' + valorDoInput + '</li>');
+
+        });
+
+    </script>
+</body>
+
+</html>
